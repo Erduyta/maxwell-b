@@ -5,7 +5,7 @@ MAXWELL_DOCKER_VOL=maxwell-vol
 MAXWELL_SERVER_FILES=/mnt/maxwell-server-files
 
 docker build -t maxwell .
-docker run --runtime=nvidia \
+docker run --env NVIDIA_DISABLE_REQUIRE=1 --gpus all \
     --mount "source=$MAXWELL_DOCKER_VAL,target=$MAXWELL_SERVER_FILES" \
     -d \
     -p $PORT:$PORT \
