@@ -27,35 +27,16 @@ Installation
 ------------
 1. Install Docker (https://docs.docker.com/desktop/windows/wsl/).
 2. Install CUDA for WSL2 (https://docs.nvidia.com/cuda/wsl-user-guide/index.html).
-3. Check all: $ sudo docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
+3. Check all: ``` sudo docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark ```
 
 Usage
 -----
 The Dockerfile is contained the root Maxwell directory.
 We have also provided a script to build and launch the Docker container:
-
-$ ./run_docker
-
-To change the number of GPUs used per simulation, edit the `run_docker` script and set `NGPUS` to the desired value.
-
-Docker Quick Reference
-----------------------
-To list all running containers,
-
-$ docker ps ls
-
-To kill a container,
-
-$ docker kill [container-name-or-id]
-
-To clean up all containers (dead containers still take up disks space),
-
-$ docker system prune --volumes
-
-To examine the container state, launch an interactive bash session:
-
-$ docker exec -it [container-name-or-id] bash
-
+```
+./run_docker
+```
+To change the number of GPUs used per simulation, edit the `run_docker` script and set `NGPUS` to the desired value. WIP
 
 Manual Installation
 ===================
