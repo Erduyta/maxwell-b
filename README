@@ -33,9 +33,11 @@ Usage
 -----
 The Dockerfile is contained the root Maxwell directory.
 We have also provided a script to build and launch the Docker container:
+
 ```
 ./run_docker
 ```
+
 To change the number of GPUs used per simulation, edit the `run_docker` script and set `NGPUS` to the desired value. WIP
 
 Manual Installation
