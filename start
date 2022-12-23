@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export MAXWELL_SERVER_FILES=~/maxwell-server-files
+
+. venv/bin/activate
+
+python3 maxwell-server/simserver.py 1 &> simserver.log &
+python3 maxwell-server/webserver.py 9041  &> webserver.log &
